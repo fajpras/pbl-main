@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    font-weight: 800;
+}
+
+body {
+    background: url(../assets/ikn2.jpeg) top/cover no-repeat;
+    height: 130vh;
+    width: 100%;
+}
+/* =========main content======== */
+.daftar {
+
+  
+    background-color: #3529477c;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+/* logo back */
+.back{
+    font-size: 40px;
+    position: absolute;
+    left:0;
+    cursor: pointer;
+}
+/* card-form */
+.card {
+    background-color: rgba(172, 183, 209, 0.319);
+    border-radius: 20px;
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+}
+
+.card-body h3 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+/* form */
+form {
+    padding: 20px;
+    color: white;
+}
+
+.masukBtn{
+    /* background-color: rgb(31, 31, 31); */
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 150px;
+}
+
+/* =============footer========= */
+
+
+footer {
+    background-color: #3529477c;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ======================RESPONSIVE==================== */
+
+@media screen and (max-width: 782px) {
+    body {
+        height: 120vh;
+
+    }
+    img {
+        height: 90px;
+    }
+}

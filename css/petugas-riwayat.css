@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+hr {
+  margin: 0;
+}
+
+body {
+  background: url('../assets/ikn2.jpeg') center/cover no-repeat fixed;
+  display: flex;
+  color: white;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background-color: rgba(30, 25, 60, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* position: fixed; */
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu i {
+  font-size: 20px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.border {
+  border: none !important;
+}
+
+.menu {
+  list-style: none;
+  padding: 0 15px;
+  margin-top: 30px;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: #ddd;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  backdrop-filter: blur(2px);
+  flex-direction: column;
+}
+
+.topbar {
+  background-image: url('../assets/bg4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 65px;
+}
+
+.content-overlay {
+  background: rgba(39, 47, 53, 0.55);
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.table {
+  color: white;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+
+}
+
+.table thead {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.table tbody tr {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.114);
+  color: white;
+  border-bottom: none;
+
+}
+
+.btn-lihat {
+  background-color: #2222226c;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.btn-lihat:hover {
+  background-color: #444;
+}
+
+.btn-setujui {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+
+footer {
+  background-color: rgba(30, 25, 60, 0.9);
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}

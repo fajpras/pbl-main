@@ -1,0 +1,221 @@
+
+
+ppetugas-lihat-surat.php
+
+1. surat rumah, izin usaha, domisili
+
+petugas-disetujui.php
+
+1. kirim  file hasil akan langsung warga => ke email warga
+
+riwayat.php (warga)
+
+  1. lihat dokumen yang di ajukan1. lihat dokumen yang di ajukan
+  .php
+
+  profil.phpetugas-lihat-surat.php
+
+1. suratugas-disetujui.php iz rumah,in usaha, domisili
+
+petugas-disetujui.php
+
+1. kirim  file hasil akan langsung warga => ke email warga
+
+riwayat.php (warga)
+
+1. lihat dokumen yang di ajukan1. lihat dokumen yang di ajukan
+profil.php
+
+  profil.php
+
+  1. update data diri
+
+form untuk admin => informasi dari petugas (password_bash!!!) 
+  petugas-riwayat.html => php
+  bikin cookie
+form untuk admin => informasi dari petugas (password_bash!!!) 
+form untuk admin => informasi dari petugas (password_bash!!!) 
+form untuk admin => informasi dari petugas (password_bash!!!) 
+form untuk admin => informasi dari petugas (password_bash!!!) 
+form untuk admin => informasi dari petugas (password_bash!!!) 
+form untuk admin => informasi dari petugas (password_bash!!!) 
+
+
+
+
+
+
+
+
+
+
+  ======> 11 november 2025 15:50
+  1. DONE 
+  .index.html ok
+  .daftar.html ok
+  .login.html ok
+  .profil.html ok
+  .dashboard.html ok
+  .riwayat.html ok
+  .surat-domisili ok 
+  .petugas-profil ok
+  .surat-usaha ok 
+  .petugas-disetujui ok 
+  .petugas-riwayat ok 
+  .surat-skk ok 
+  .surat-sktm ok 
+  .surat-rumah ok 
+  .petugas-pending ok +
+
+
+  >on-progress
+  .petugas-lihat
+
+  note : 
+  menambah sidebar petugas pending,
+  memperbaiki beberapa kesalahan pada pembuatan kode sebelumnya,
+  menambah label warna pada halaman petugas riwayat,
+
+
+
+  KHUSUS UNTUK PENAMBAHAN PADA PETUGAS :
+  MENAMBAHKAN  LIHAT DOKUMEN PADA 4 SURAT   
+
+
+
+  *NOTE untuk NEXT updt:
+  login, daftar, surat ditambah validasi menggunakan JS,
+  sedikit penyempurnaan di bagian petugas tombol,
+
+  penyempurnaan JS dan page petugas
+
+
+
+  ======> 10 November 2025 {libur}
+
+
+  ======> 9 november 2025 21:34
+  1. DONE 
+  .index.html ok
+  .daftar.html ok
+  .login.html ok
+  .profil.html ok
+  .dashboard.html ok
+  .riwayat.html ok
+  .surat-domisili ok 
+  .petugas-profil ok
+  .surat-usaha ok +
+  .petugas-disetujui ok +
+  .petugas-riwayat ok +
+  .surat-skk ok +
+  .surat-sktm ok +
+  .surat-rumah ok +
+
+  >on-progress
+  .petugas-lihat
+  .petugas-pending
+
+
+  note updt:
+  sidebar petugas disetujui, merapikan beberapa tampilan surat surat
+
+
+  *NOTE untuk NEXT updt:
+  login, daftar, surat ditambah validasi menggunakan JS,
+  untuk petugas riwayat tambah label berwarna pada status,
+  sedikit penyempurnaan di bagian petugas tombol,
+  menambah kan page lihat untuk setiap jenis surat,
+  penyempurnaan JS dan page petugas
+
+
+  ======> 8 november 2025 08:06
+  1. DONE 
+  .index.html ok
+  .daftar.html ok
+  .login.html ok
+  .profil.html ok
+  .dashboard.html ok
+  .riwayat.html ok
+  .surat-domisili ok 
+  .petugas-profil ok +
+
+  .surat-skk ok (cek)
+  .surat-sktm ok (cek)
+  .surat-usaha ok (cek)
+  .surat-rumah ok (cek)
+.petugas-riwayat ok (cek)
+
+  >on-progress
+  .petugas-disetujui
+  .petugas-lihat
+  .petugas-pending
+
+
+  note updt, fix: 
+  penambahan bebrapa adjust pada surat domisili ok, 
+  memperbaiki profil petugas hanya bisa melihat saja dan menambah profile, 
+  memperbaiki beberapa navbar height ke 65px,
+  memperbaiki sidebar agar bisa lebih responsive,
+  menambahkan tombol back dan menggunkan JS tidak menggunkan href,
+
+
+  ======> 7 November 2025 {libur}
+
+
+  ======> 6 november 2025 08:07
+  1. DONE 
+  .index.html ok
+  .daftar.html ok
+  .login.html ok
+  .profil.html ok
+  .dashboard.html ok
+  .riwayat.html ok
+  .surat-domisili ok (cek)
+  .surat-skk ok (cek)
+  .surat-sktm ok (cek)
+  .surat-usaha ok (cek)
+.surat-rumah ok (cek)
+  .petugas-riwayat ok (cek)+
+
+  >on-progress
+  .petugas-disetujui
+  .petugas-lihat
+  .petugas-pending
+  .petugas-profil
+
+  ======> 6 November 2025 (note)(done)
+1. .petugas-riwayat (perbaikan)
+  2. .riwayat.html +alert, +icons
+
+======> 6 November 2025 (note)(on-progress)
+  1. surat +alert, +back button, fix, ux, ui
+  2. pastikan alert berfungsi
+  3. cek alur logika sampai gila
+
+
+  ======> REVISI DAN FIX
+  PENTING
+
+  1.	melengkapi siap pbl DEADLINE 7 NOVEMBER 2025
+  ⦁	edit dan upload video (video hasil di unggah ke youtube)
+⦁	upload file pendukung (laporan pada bagian Bab 1 dan 2)
+
+  2. memperbaiki tampilan web agar lebih konsisten
+
+
+  PAGE CODINGAN
+  1.	halaman warga
+  ⦁	PADA SETIAP HALAMAN DARI JENIS SURAT DI TAMBAHKAN TOMBOL KEMBALI/BACK KE DASHBOARD/RIWAYAT
+  ⦁	pada halaman form surta pada button "kirim permohonan" di beri alert
+  ⦁	pada halaman form surat ada ikon profil arah link di perbaiki lagi
+  ⦁	apakah pada halaman dashboard untuk bagian section layanan semua tombol akan langsung mengarahkan ke bagian surat atau warga di haruskan mengisi data diri terlebih dahulu?
+  untuk bagian ini sebenarnya lebih baik warga di arahkan mengisi data diri terlebih dahulu tetapi akan membutuhkan page baru lagi yang dimana nantinya setelah warga mengisi data diri tombol dokumen pada section layanan baru akan bisa mengarahkan ke form dokumen dan ini akan berpengaruh juga untuk di bagian navbar "lacak pengajuan".
+  ⦁	menambahkan tanda pop up seperti di figma agar warga mengisi data diri terlebih dahulu
+  ⦁	pada halaman profil warga untuk buttom kembali dan logout di perbaiki agar tampilan kosisten dan perbaiki arah link "kembali" agar menuju dashboard, menambahkan alert pada timbol "simpan"
+  ⦁	pada halaman riwayat tombol surat rumah di bagian navba arah link di perbaiki
+  ⦁	PADA HALAMAN RIWAYAT BAGIAN NAVBAR APAKAH TOMBOL RIWAYAT DI PERLUKAN ATAU TIDAK???
+
+2. halaman petugas (REVISI SEMUA)
+  ⦁	setelah login arah link di ubah ke "petugas-pending"
+  ⦁	ubah tampilan agar konsisten terutama pada bagian navigasi
+  ⦁	untuk profil petugas coba di pikirkan lagi kek mana

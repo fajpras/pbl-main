@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 50px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+.navbar{
+  height:65px !important;
+  align-items: center;
+  padding: 0 !important;
+}
+.navbar>.container-fluid {
+  padding: 0 40px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    font-weight: 800;
+}
+body {
+  background: url('../assets/ikn2.jpeg') center/cover no-repeat fixed;
+    /* width: 100%; */
+
+}
+nav {
+    background-image: url('../assets/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+}
+.logo img {
+    height: 60px;
+}
+footer {
+    background-color: rgba(108, 85, 154, 0.6);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    font-size: 14px;
+}
+.profile-icon i {
+    font-size: 50px;
+    color: #b78aeee2;
+    margin: 30px;
+
+}   
+.kol{
+    background-color: #584d72ae !important;
+
+}
+.conta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 100%;
+   background-color: #584d6f8d;     
+
+}
+.container {
+    padding: 100px 0;
+    height: 100%;
+    width: 100% !important;
+    /* background-color: #584d6f8d; */
+    
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.234) !important;
+      border: 1px solid white;
+}
+h2{
+    color: #ffffff;
+}
+.table td, .table th, .table tr{
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255, 0.527);
+  color: rgb(0, 0, 0);
+  border:none;
+
+}
+p{
+    color: white;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+a {
+    text-decoration: none;
+  }
