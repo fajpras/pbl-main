@@ -17,9 +17,6 @@ if(!empty($data['status_data_diri']) ){
   $daftar = "warga/profil.php" ;
 } 
 
-
-
-
 ?>
 
 
@@ -42,9 +39,7 @@ if(!empty($data['status_data_diri']) ){
 
   <body>
 
-    <?= $warga ?? ""?>
-    <?= $daftar ?? "" ?>
-    <?=  $id ?> <!-- ========NAVIGASI=========== -->
+    <!-- ========NAVIGASI=========== -->
     <nav class="navbar navbar-dark bg-dark  navbar-expand-lg bg-body-tertiary fixed-top" id="navigasi">
       <div class="container-fluid ">
         <a class="logo-link navbar-brand"><img src="./assets/logo.svg" alt="logo" /></a>
@@ -72,20 +67,17 @@ if(!empty($data['status_data_diri']) ){
             <li class="nav-item">
               <a class="nav-link active" href="<?= $daftar ?? $warga ?>">Lacak Pengajuan</a>
             </li>
+          </ul>
         </div>
 
 
         <div class="icon-hide profile-btn"> 
-          <div class="d-flex text-danger fs-5 me-1 "><?php echo $_SESSION['nama'] ?>
-            <?php echo $_SESSION['status']?> 
-
-
+          <div class="d-flex text-danger fs-5 me-1 ">
             <a href="warga/profil.php" class="profile-icon ">
               <i class="ml-3 bi bi-person-circle"></i>
             </a>
           </div>
         </div>
-      </div>
       </div>
     </nav>
 

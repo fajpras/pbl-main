@@ -12,8 +12,6 @@ if (isset($_GET['note'])) {
   echo "<script>alert('Data Berhasil di simpan')</script>";
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +25,20 @@ if (isset($_GET['note'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/dashboard-admin.css" />
+
+
+
+    <style>
+
+    .card-total{
+      border-radius:8px;
+      color:black !important;
+      font-weight:800;
+      background-color:;
+      border:1px solid black;
+    }
+
+    </style>
   </head>
 
   <body>
@@ -99,7 +111,7 @@ if (isset($_GET['note'])) {
             <div class="row">
               <div class="col-md-6">
 
-                <div class="card text-light fs-4 bg-success mb-3">
+                <div class="card text-light fs-4 card-total surat mb-3">
 
 
                   <?php
@@ -134,7 +146,7 @@ if (isset($_GET['note'])) {
 
               <div class="col-md-6">
 
-                <div class="card bg-warning mb-3">
+                <div class="card card-admin mb-3">
 
                   <div class="card-body">
 

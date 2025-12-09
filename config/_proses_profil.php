@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($update) {
             echo "<script>
               alert('Data berhasil diperbarui!');
-            window.location = '../warga/profil.php';
+            window.location = '../dashboard.php';
             </script>";
         } else {
             die("Update Error: " . mysqli_error($conn));
