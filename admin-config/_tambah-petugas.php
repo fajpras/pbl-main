@@ -17,15 +17,14 @@ $nama = $_POST['nama'];
 $email = $_POST['email'];
 $password= $_POST['password'];
 $Password = password_hash($password, PASSWORD_DEFAULT);
-$nohp = $_POST['nohp'];
 
 //query insert petugas
-$QQ = "insert into petugas (nama_petugas, email ,no_hp_petugas, password_petugas) values ('$nama','$email',$nohp,'$Password')";
+$QQ = "insert into petugas (nama_petugas, email , password_petugas) values ('$nama','$email','$Password')";
 $validasi = mysqli_query($conn, $QQ);
 
 if ($validasi) {
   header("Refresh:0; url=../admin/tambah-petugas.php");
-  
+
 }
 
 ?>

@@ -25,7 +25,6 @@ if (isset($_GET['status']) == "berhasil") {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -33,12 +32,10 @@ if (isset($_GET['status']) == "berhasil") {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>halaman petugas - AJUK</title>
+    <title>Petugas Pending | AJUK</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/petugas-pending.css" />
-
-
 
   </head>
   <div class="container-fluid">
@@ -95,7 +92,7 @@ if (isset($_GET['status']) == "berhasil") {
           <div class="pengajuan-section">
             <div class="content">
               <div class="content-overlay">
-                <h2 class="fw-medium mb-4 text-left">Dokumen Diajukan Warga</h2>
+                <h2 class="fw-medium mb-4 fw-bold text-left">Dokumen Diajukan Warga</h2>
                 <div class="table-responsive">
                   <table class="table table-hover align-middle text-white">
                     <thead>
@@ -111,20 +108,16 @@ if (isset($_GET['status']) == "berhasil") {
                     </thead>
                     <tbody>
 
-
-
                       <?php
 
                       //ambil data dari dokumen
                       $query = "select date_format(tanggal, '%d %M %Y') as date, nama_dokumen,  status, ids_warga, nama_warga, id_surat from dokumens where status = 'PENDING' order by date DESC";
                       $validasi = mysqli_query($conn, $query);
 
-
                       // tampilkan data 
                       if (mysqli_num_rows($validasi) > 0) {
 
                       while ($row = mysqli_fetch_assoc($validasi)) {
-
 
                       $nama_dokumen = $row['nama_dokumen'];
                       if ($nama_dokumen == 'SKTM') {
@@ -158,13 +151,13 @@ if (isset($_GET['status']) == "berhasil") {
                       <input type="hidden" name="petugas" id="hidden_petugas">
                       <input type="hidden" name="alasan" id="hidden_alasan">
 
-                      <select id="status" name="status" class="btn btn-info  me-2 my-2" required>
+                      <select id="status" name="status" class="btn btn-light me-2 my-2" required>
                       <option value="">Pilih Status</option>
                       <option value="disetujui">Disetujui</option>
                       <option value="ditolak">Ditolak</option>
                       </select>
 
-                      <button  type="button" class="btn btn-warning float-center px-2 py-1"  onclick="tolakSurat()">Alasan</button>
+                      <button  type="button" class="btn btn-info float-center px-2 py-1"  onclick="tolakSurat()">Alasan</button>
                       </form>
 
                       </td>
@@ -254,6 +247,6 @@ Saya yakin dengan dokumen ini
       }
     });
 }
-  </script>
+</script>
 
 </html>

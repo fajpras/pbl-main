@@ -54,7 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     $cek_petugas = mysqli_query($conn,$qry_dokumen);
 
-    echo '<meta http-equiv="refresh" content="3; url=../warga/riwayat.php?note=berhasil">';
+    echo '<meta http-equiv="refresh" content="1; url=../warga/riwayat.php?note=berhasil">';
 
   }else{
     echo "<script> 

@@ -18,9 +18,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $Q_nik = mysqli_query($conn, "select nik from dokumen_rumah where nik = $nik");
   if(mysqli_num_rows($Q_nik) > 0 ){
     echo "<script>
-      alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
-      window.location.href = ' ../surat/surat-rumah.php';</script>";
-    
+    alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
+    window.location.href = ' ../surat/surat-rumah.php';</script>";
+
   }
 
   //data
@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $kecamatan = $_POST['kecamatan'];
   $desa = $_POST['desa'];
   $alamat = $_POST['alamat'];
-    $foto_sertifikat= addslashes(file_get_contents($_FILES['foto_sertifikat']['tmp_name']));
+  $foto_sertifikat= addslashes(file_get_contents($_FILES['foto_sertifikat']['tmp_name']));
   $foto_akta_rumah=  addslashes(file_get_contents($_FILES['foto_akta_mendirikan']['tmp_name']));
   $foto_kk=  addslashes(file_get_contents($_FILES['foto_kk']['tmp_name']));
   $foto_ktp=  addslashes(file_get_contents($_FILES['foto_ktp']['tmp_name'])); 
@@ -58,16 +58,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
   }else{
     echo "<script> 
-      alert('Data Yang Anda Masukkan Tidak Sesuai')
+    alert('Data Yang Anda Masukkan Tidak Sesuai')
     </script>";
     header("Location:../surat/surat-rumah.php");
   }
 
 }else {
   echo "<script> 
-    alert('Data Yang Anda Masukkan Tidak Sesuai')
-     </script>";
-    header("Location:../surat/surat-rumah.php");
+  alert('Data Yang Anda Masukkan Tidak Sesuai')
+  </script>";
+  header("Location:../surat/surat-rumah.php");
 
 }
 

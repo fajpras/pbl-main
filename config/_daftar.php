@@ -21,14 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $errpass = "Silahkan masukkan sesuai dengan ketentuan (A-Z, 0-9, panjang 6)";
     header("Location: ../daftar.php?err=". urlencode($errpass) );
-
   } else {
+
     //enkripsi pass
     $Password = password_hash($password, PASSWORD_DEFAULT);
-
     //validasi cek email
     $check_status = mysqli_query($conn, "SELECT * FROM `warga` WHERE email = '$email'");
-
     if (mysqli_num_rows($check_status) > 0) {
 
       echo "<script>alert('email sudah terdaftar'); window.location.href='../login.php'</script>"; 
@@ -36,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
       //aman insert warga
-      mysqli_real_escape_string($conn, "INSERT INTO warga (nama, email, password) VALUES ('$nama', '$email', '$Password')");
+      mysqli_query($conn, "INSERT INTO warga (nama, email, password) VALUES ('$nama', '$email', '$Password')");
 
       //aksi
       header("Location:../login.php");

@@ -10,7 +10,7 @@ $err = $_GET['err'];
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Daftar AJUK</title>
+  <title>Daftar | AJUK</title>
 
   <!-- ================LINK============ -->
   <link rel="stylesheet" href="bootstrap\css\bootstrap.min.css" />
@@ -45,11 +45,11 @@ $err = $_GET['err'];
 
 
                 <label class="form-label mt-3 ">Email (aktif)</label>
-                <input type="email" name="email" value="<?php echo $_POST['email']; ?>" id="email" class="form-control" required placeholder="" />
+                <input type="email" name="email" value="" id="email" class="form-control" required placeholder="" />
                 <small class="fs-8 text-danger"><?php echo $erremail ?></small>
 
                 <label class="form-label mt-3">Password</label>
-                <input type="password" name="password" value="<?php $_POST['password']; ?>" class="form-control" required minlength="6" />
+                <input type="password" name="password" value="" class="form-control" required minlength="8" />
                 <small class="fs-8 " style="color:yellow;"><?php echo $err ?></small>
 
                 <div class="d-grid mt-5 ">
@@ -71,13 +71,7 @@ $err = $_GET['err'];
     <p>AJUK - Copyright © 2025. All rights reserved.</p>
   </footer>
 </body>
-<script>
-  // button --> dashboard
-  /* function daftar() { */
-  /*   window.location.href = "dashboard.html"; */
-  /*   alert('Login berhasil') */
-  /* } */
-</script>
+
 <script src="./script/script.js"></script>
 
 </html>

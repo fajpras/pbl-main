@@ -11,7 +11,7 @@ $pass_eror = $_GET['errpass']??'';
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Masuk AJUK</title>
+    <title>Masuk | AJUK</title>
 
     <!-- ===========linkk========== -->
     <link rel="stylesheet" href="bootstrap\css\bootstrap.min.css" />

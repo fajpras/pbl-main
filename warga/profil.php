@@ -24,7 +24,7 @@ if (mysqli_num_rows($mysql) === 1) {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - AJUK</title>
+    <title>Profil Saya | AJUK</title>
 
     <!-- ========LINK====== -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -164,7 +164,7 @@ if (mysqli_num_rows($mysql) === 1) {
                 </div>
               </div>
 
-            <?php if (isset($read)): ?>
+              <?php if (isset($read)): ?>
               <button type="button" class="btn btn-warning mt-3" onclick="enableEdit()"><i class="bi bi-pencil-square me-3"></i>
                 Edit Data</button>
               <?php endif; ?>
@@ -190,6 +190,6 @@ function enableEdit() {
     el.removeAttribute("disabled");
   });
 }
-</script>
+  </script>
 
 </html>

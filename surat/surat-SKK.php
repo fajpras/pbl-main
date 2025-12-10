@@ -89,14 +89,9 @@ include "../config/auth.php";
                 </div>
 
                 <div class="col-md-6">
-                  <label for="pekerjaan" class="form-label mt-3">Pekerjaan</label>
-                  <select class="form-select" id="pekerjaan" name="pekerjaan" required>
-                    <option  aria-readonly="apa" selected>Pilih Pekerjaan</option>
-                    <option value="Pegawai Sipil">Pegawai Sipil</option>
-                    <option value="Guru">Guru</option>
-                    <option value="Arsitek">Arsitek</option>
-                  </select>
-                </div>
+                    <label for="pekerjaan" class="form-label mt-3">Pekerjaan</label>
+                    <input type="text" class="form-control" name="pekerjaan">
+                  </div>
 
                 <div class="col-md-12 mt-5">
                   <label for="alamat" class="form-label fw-bold">Alamat</label>

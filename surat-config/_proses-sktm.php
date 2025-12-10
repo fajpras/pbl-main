@@ -17,9 +17,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $Q_nik = mysqli_query($conn, "select nik from dokumen_sktm where nik = $nik");
   if(mysqli_num_rows($Q_nik) > 0 ){
     echo "<script>
-      alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
-      window.location.href = ' ../surat/surat-SKTM.php';</script>";
-    
+    alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
+    window.location.href = ' ../surat/surat-SKTM.php';</script>";
+
   }
 
   $nama_lengkap = $_POST['nama_lengkap'];
@@ -47,9 +47,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $qry_dokumen = "INSERT INTO `dokumens`( `nama_dokumen`, `ids_warga`, `nama_warga`,`id_surat`,`status`) VALUES ('SKTM','$id','$nama_lengkap','$id_surat' ,'PENDING')";
 
     $cek_petugas = mysqli_query($conn,$qry_dokumen);
-    
-    echo '<meta http-equiv="refresh" content="3; url=../warga/riwayat.php?note=berhasil">';
- 
+
+    echo '<meta http-equiv="refresh" content="1; url=../warga/riwayat.php?note=berhasil">';
+
 
   }else{
     echo "<script> 
@@ -59,10 +59,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   }
 
 }else {
-   echo "<script> 
-    alert('Data Yang Anda Masukkan Tidak Sesuai')
-    </script>";
-    header("Location:../surat/surat-SKTM.php");
+  echo "<script> 
+  alert('Data Yang Anda Masukkan Tidak Sesuai')
+  </script>";
+  header("Location:../surat/surat-SKTM.php");
 
 }
 

@@ -23,11 +23,7 @@ $jk = $_POST['jk'];
 $hp = $_POST['hp'];
 
 //insert data data_diri_petugas
-$Q_petugas = "
-INSERT INTO data_diri_petugas 
-(id_petugas, nama_lengkap, nomor, email, tempat_lahir, tanggal_lahir, jenis_kelamin)
-VALUES
-($id, '$nama', '$hp', '$email', '$tl', '$tgl', '$jk');
+$Q_petugas = "INSERT INTO data_diri_petugas (id_petugas, nama_lengkap, nomor, email, tempat_lahir, tanggal_lahir, jenis_kelamin)VALUES($id, '$nama', '$hp', '$email', '$tl', '$tgl', '$jk')";
 $F_petugas = mysqli_query($conn, $Q_petugas);
 
 if ($F_petugas) {

@@ -34,7 +34,7 @@ $dis ="disabled";
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - AJUK</title>
+    <title>Profil Saya | AJUK</title>
 
     <!-- link -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -54,10 +54,10 @@ $dis ="disabled";
       <div class="nav-links">
         <!-- keluar -->
         <a 
-   class="fs-7 fw-medium align-items-center btn btn-danger"
-   href="../config/_close.php" onclick="return confirm('anda yakin ingin keluar')">
-    <i class="bi bi-box-arrow-right p-1"></i>Keluar
-</a>      </div>
+          class="fs-7 fw-medium align-items-center btn btn-danger"
+          href="../config/_close.php" onclick="return confirm('anda yakin ingin keluar')">
+          <i class="bi bi-box-arrow-right p-1"></i>Keluar
+        </a>      </div>
     </nav>
 
     <!-- main section -->
@@ -86,35 +86,35 @@ $dis ="disabled";
                 <input type="file" placeholder="<?= $data['foto_profil'] ?? "" ?> " name="foto_profil_petugas" class="form-control" >
               </div>
 
-                <div class="mb-2">
-                  <label>Nomor Petugas</label>
-                  <input type="text" class="form-control" value="<?= $data['nomor'] ?? ''?>" <?= $read ?>>
+              <div class="mb-2">
+                <label>Nomor Petugas</label>
+                <input type="text" class="form-control" value="<?= $data['nomor'] ?? ''?>" <?= $read ?>>
+              </div>
+
+              <div class="mb-2">
+                <label>Email</label>
+                <input type="email" class="form-control" value="<?= $data['email'] ?? '' ?>" <?= $read ?>>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <label>Tempat Lahir</label>
+                  <input type="text" class="form-control" value="<?= $data['tempat_lahir'] ?? '' ?>" <?= $read ?>>
+                </div>
+                <div class="col-md-6 mb-2">
+                  <label>Tanggal Lahir</label>
+                  <input type="text" class="form-control" value="<?= $data['tanggal_lahir'] ?? '' ?>" <?= $read ?>>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <label>Jenis Kelamin</label>
+                  <input type="text" class="form-control" value="<?= $data['jenis_kelamin'] ?? '' ?>" <?= $read?>>
                 </div>
 
-                <div class="mb-2">
-                  <label>Email</label>
-                  <input type="email" class="form-control" value="<?= $data['email'] ?? '' ?>" <?= $read ?>>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <label>Tempat Lahir</label>
-                    <input type="text" class="form-control" value="<?= $data['tempat_lahir'] ?? '' ?>" <?= $read ?>>
-                  </div>
-                  <div class="col-md-6 mb-2">
-                    <label>Tanggal Lahir</label>
-                    <input type="text" class="form-control" value="<?= $data['tanggal_lahir'] ?? '' ?>" <?= $read ?>>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6 mb-2">
-                    <label>Jenis Kelamin</label>
-                    <input type="text" class="form-control" value="<?= $data['jenis_kelamin'] ?? '' ?>" <?= $read?>>
-                                     </div>
-
-                </div>
-                <button class="col-md-3 btn btn-light mt-3 float-end" onclick="konfirm()">Simpan</button>
+              </div>
+              <button class="col-md-3 btn btn-light mt-3 float-end" onclick="konfirm()">Simpan</button>
 
             </form>
           </div>
@@ -129,4 +129,4 @@ $dis ="disabled";
     </footer>
   </body>
 
-      </html>
+</html>

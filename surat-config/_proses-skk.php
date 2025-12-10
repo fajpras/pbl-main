@@ -17,8 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $Q_nik = mysqli_query($conn, "select nik from dokumen_skk where nik = $nik");
   if(mysqli_num_rows($Q_nik) > 0 ){
     echo "<script>
-      alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
-      window.location.href = ' ../surat/surat-SKK.php';</script>";
+    alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
+    window.location.href = ' ../surat/surat-SKK.php';</script>";
     exit();
   }
 
@@ -48,20 +48,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     $cek_petugas = mysqli_query($conn,$qry_dokumen);
 
-    echo '<meta http-equiv="refresh" content="3; url=../warga/riwayat.php?note=berhasil">';
+    echo '<meta http-equiv="refresh" content="1; url=../warga/riwayat.php?note=berhasil">';
 
   }else{
     echo "<script> 
-      alert('Data Yang Anda Masukkan Tidak Sesuai')
+    alert('Data Yang Anda Masukkan Tidak Sesuai')
     </script>";
     header("Location:../surat/surat-SKK.php");
   }
 
 }else {
   echo "<script> 
-    alert('Data Yang Anda Masukkan Tidak Sesuai')
-     </script>";
-    header("Location:../surat/surat-SKK.php");
+  alert('Data Yang Anda Masukkan Tidak Sesuai')
+  </script>";
+  header("Location:../surat/surat-SKK.php");
 
 }
 

@@ -18,9 +18,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   //validasi nik jika sudah terdaftar
   if(mysqli_num_rows($Q_nik) > 0 ){
     echo "<script>
-      alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
-      window.location.href = ' ../surat/surat-domisili.php';</script>";
-    
+    alert('NIK SUDAH TERDAFTAR SEBELUMNYA')
+    window.location.href = ' ../surat/surat-domisili.php';</script>";
+
   }
   //ambil data
   $nama = $_POST['nama_lengkap'];
@@ -52,16 +52,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
   }else{
     echo "<script> 
-      alert('Data Yang Anda Masukkan Tidak Sesuai')
+    alert('Data Yang Anda Masukkan Tidak Sesuai')
     </script>";
     header("Location:../surat/surat-domisili.php");
   }
 
 }else {
   echo "<script> 
-    alert('Data Yang Anda Masukkan Tidak Sesuai')
-     </script>";
-    header("Location:../surat/surat-domisili.php");
+  alert('Data Yang Anda Masukkan Tidak Sesuai')
+  </script>";
+  header("Location:../surat/surat-domisili.php");
 
 
 
