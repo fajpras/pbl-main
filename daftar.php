@@ -10,7 +10,7 @@ $err = $_GET['err'];
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Daftar | AJUK</title>
+  <title>Daftar AJUK</title>
 
   <!-- ================LINK============ -->
   <link rel="stylesheet" href="bootstrap\css\bootstrap.min.css" />
@@ -41,7 +41,7 @@ $err = $_GET['err'];
               <!-- form content -->
               <form action="./config/_daftar.php" method="POST">
                 <label class="form-label">Nama</label>
-                <input type="text" value="<?php echo $_POST['nama']; ?>" name="nama" id="nama" class="form-control" required placeholder="" />
+                <input type="text" value="" name="nama" id="nama" class="form-control" required placeholder="" />
 
 
                 <label class="form-label mt-3 ">Email (aktif)</label>
@@ -49,7 +49,7 @@ $err = $_GET['err'];
                 <small class="fs-8 text-danger"><?php echo $erremail ?></small>
 
                 <label class="form-label mt-3">Password</label>
-                <input type="password" name="password" value="" class="form-control" required minlength="8" />
+                <input type="password" name="password" value="" class="form-control" required minlength="6" />
                 <small class="fs-8 " style="color:yellow;"><?php echo $err ?></small>
 
                 <div class="d-grid mt-5 ">

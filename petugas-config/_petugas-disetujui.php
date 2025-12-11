@@ -22,8 +22,10 @@ if(isset($_GET['id'])) {
   $id_surat = $_GET['id'];
   $nama_dok = $_GET['dok'];
   $id_warga = $_GET['idw'];
-  $mail = new PHPMailer(true);
 
+  $mail = new PHPMailer(true);
+  
+  //ambil email dari table data_diri
   $Q = "SELECT dd.email 
   FROM dokumens d
   JOIN warga w ON d.ids_warga = w.id_warga
@@ -33,11 +35,15 @@ if(isset($_GET['id'])) {
   $F = mysqli_query($conn, $Q);
   $D = mysqli_fetch_assoc($F);
   try {
+
     // Konfigurasi SMTP
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
+
+    //ganti email sesuai dengan kebutuhan
     $mail->Username   = 'fajrinurpras07@gmail.com'; 
+    //app key dari gmail
     $mail->Password   = 'xkzb fsjv lher vriu'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
@@ -47,7 +53,7 @@ if(isset($_GET['id'])) {
     $mail->setFrom('faleftplays@gmail.com', 'Admin Kelurahan');
     $mail->addAddress($email, 'Warga'); 
 
-    // Konten
+    // Uabah isi sesuia dengan apa yang di anjurkan
     $mail->isHTML(true);
     $mail->Subject = 'Pemberitahuan Surat';
     $mail->Body    = 'Halo tuan ini surat anda sudah selesai dan bisa di unduh pada web pengajuan http://localhost/pblC/login.php';
@@ -68,8 +74,10 @@ if(isset($_GET['id'])) {
     }
 
     echo 'Sukses! Email berhasil dikirim.';
+
+    //email gagal terkirim
   } catch (Exception $e) {
-    echo "Gagal mengirim email. Error: {$mail->ErrorInfo}";
+   echo "<script>alert('Email Tidak Terdaftar!'); window.location='../petugas/petugas-disetujui.php';</script>"; 
   }
 
 }

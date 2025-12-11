@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $_SESSION['status'] = 1;
     header("Location:../petugas/petugas-profil.php");
     echo "<script> alert('Data berhasil ditambahkan!')
-        </script>;";
+    </script>;";
 
   } 
 }
