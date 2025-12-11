@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $id_surat = $array_ambil['id_surat'];
 
     //masukkan data status ke table dokumens
-    $qry_dokumen = "INSERT INTO `dokumens`( `nama_dokumen`, `ids_warga`, `nama_warga`,`id_surat`,`status`) VALUES ('SDM','$id','$nama','$id_surat' ,'PENDING')";
+    $qry_dokumen = "INSERT INTO `dokumens`( `nama_dokumen`, `id_warga`, `nama_warga`,`id_surat`,`status`) VALUES ('SDM','$id','$nama','$id_surat' ,'PENDING')";
     $cek_petugas = mysqli_query($conn,$qry_dokumen);
 
     echo '<meta http-equiv="refresh" content="1; url=../warga/riwayat.php?note=berhasil">';

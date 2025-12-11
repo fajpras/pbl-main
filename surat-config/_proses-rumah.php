@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $id_surat = $array_ambil['id_surat'];
 
     //masukkan data ke dalam dokumens
-    $qry_dokumen = "INSERT INTO `dokumens`( `nama_dokumen`, `ids_warga`, `nama_warga`,`id_surat`,`status`) VALUES ('SRM','$id','$nama','$id_surat' ,'PENDING')";
+    $qry_dokumen = "INSERT INTO `dokumens`( `nama_dokumen`, `id_warga`, `nama_warga`,`id_surat`,`status`) VALUES ('SRM','$id','$nama','$id_surat' ,'PENDING')";
 
     $cek_petugas = mysqli_query($conn,$qry_dokumen);
 

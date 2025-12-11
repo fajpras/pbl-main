@@ -28,7 +28,7 @@ if(isset($_GET['id'])) {
   //ambil email dari table data_diri
   $Q = "SELECT dd.email 
   FROM dokumens d
-  JOIN warga w ON d.ids_warga = w.id_warga
+  JOIN warga w ON d.id_warga = w.id_warga
   JOIN data_diri dd ON w.id_warga = dd.id_warga
   WHERE w.id_warga = $id_warga 
   LIMIT 1"; 

@@ -100,7 +100,7 @@ if (!isset($_SESSION['id_petugas'])) {
                         $n=1;
 
                         //ambil data dokumen yang di setujui
-                        $query = "select date_format(tanggal, '%d %M %Y') as date, nama_dokumen,  status, ids_warga, nama_warga, id_surat from dokumens where status = 'DISETUJUI' order by date DESC";
+                        $query = "select date_format(tanggal, '%d %M %Y') as date, nama_dokumen,  status, id_warga, nama_warga, id_surat from dokumens where status = 'DISETUJUI' order by date DESC";
                         $validasi = mysqli_query($conn, $query);
 
 
@@ -134,11 +134,11 @@ if (!isset($_SESSION['id_petugas'])) {
                         <td>
 
 
-                        <a class ="me-1" onclick="return confirm(`Konfirmasi Kirim Surat`); " href="../petugas-config/_petugas-disetujui.php?id='.$row['id_surat'].'&dok='.$nama_dokumen.'&idw='.$row['ids_warga'].'" class=""><button class="btn-lihat bg-danger"> <i class="bi bi-send-fill me-1"></i> Kirim
+                        <a class ="me-1" onclick="return confirm(`Konfirmasi Kirim Surat`); " href="../petugas-config/_petugas-disetujui.php?id='.$row['id_surat'].'&dok='.$nama_dokumen.'&idw='.$row['id_warga'].'" class=""><button class="btn-lihat bg-danger"> <i class="bi bi-send-fill me-1"></i> Kirim
                         </button></a>
 
 
-                        <a class="" href="../kol.php?id='.$row['id_surat'].'&dok='.$nama_dokumen.'&idw='.$row['ids_warga'].'"><button class="btn-lihat btn btn-info"><i class="bi bi-eye me-2"></i>Lihat</button></a></td>
+                        <a class="" href="../kol.php?id='.$row['id_surat'].'&dok='.$nama_dokumen.'&idw='.$row['id_warga'].'"><button class="btn-lihat btn btn-info"><i class="bi bi-eye me-2"></i>Lihat</button></a></td>
 
                         </tr>
 

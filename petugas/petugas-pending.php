@@ -111,7 +111,7 @@ if (isset($_GET['status']) == "berhasil") {
                       <?php
 
                       //ambil data dari dokumen
-                      $query = "select date_format(tanggal, '%d %M %Y') as date, nama_dokumen,  status, ids_warga, nama_warga, id_surat from dokumens where status = 'PENDING' order by date DESC";
+                      $query = "select date_format(tanggal, '%d %M %Y') as date, nama_dokumen,  status, id_warga, nama_warga, id_surat from dokumens where status = 'PENDING' order by date DESC";
                       $validasi = mysqli_query($conn, $query);
 
                       // tampilkan data 
