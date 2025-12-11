@@ -153,7 +153,7 @@ $id = $_SESSION['id_warga'];
             </div>
 
             <?php 
-            $Q_cekDok = mysqli_query($conn, "select * from dokumens where ids_warga = $id");
+            $Q_cekDok = mysqli_query($conn, "select * from dokumens where id_warga = $id");
             if(mysqli_num_rows($Q_cekDok) == 0 ){
             echo '<div class="riwayat-list">
             <div class="riwayat-card mt-3">
@@ -168,7 +168,7 @@ $id = $_SESSION['id_warga'];
             <?php
 
             //list dokumens 
-            $query = "select *, date_format(tanggal, '%d %M %Y') as date, nama_dokumen, status, ids_warga, komentar from dokumens where ids_warga = $id";
+            $query = "select *, date_format(tanggal, '%d %M %Y') as date, nama_dokumen, status, id_warga, komentar from dokumens where id_warga = $id";
             $validasi = mysqli_query($conn, $query);
 
             //tampil isi dokumens
