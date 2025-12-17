@@ -62,11 +62,13 @@ if (mysqli_num_rows($mysql) === 1) {
             <!-- icon profile -->
             <div class="profil-side">
               <div class="profil-avatar">
-                <?php if(mysqli_num_rows($mysql)!="NULL"){ ?>
-                <img style="border-radius:50%;" src=" ../uploads/<?= $data['foto_profil'] ?? "" ?>" height="100" width="100">
+
+                <?php if(mysqli_num_rows($mysql) > 0){ ?>
+                <img style="border-radius:50%;" src=" ../uploads/<?= $data['foto_profil'] ?? "../assets/logo.svg"?>" height="100" width="100">
                 <?php }else{?>
                   <img style="border-radius:50%;" src=" ../assets/logo.svg" height="100" width="100">
                 <?php };?>
+
               </div>
               <h3 class="text-light">Halo <?php echo $_SESSION['nama']??"" ?>
 
@@ -85,7 +87,7 @@ if (mysqli_num_rows($mysql) === 1) {
 
               <div class="mb-2">
                 <label>NIK</label>
-                <input type="number" class="form-control" name="nik" value="<?= $data['nik']??"" ?>" <?= $read??"" ?> minlength="16"required>
+                <input type="number" class="form-control" name="nik" value="<?= $data['nik']??"" ?>" <?= $read??"" ?> required minlength="16" >
               </div>
               <div class="row">
                 <div class="col-md-6">

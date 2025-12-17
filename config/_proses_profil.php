@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $kelurahan     = $_POST['kelurahan'] ?? '';
 
   // validasi
+// $Cnik =CHAR_LENGTH($nik);
+
   $required = [$nama, $nik, $email, $agama, $tempat_lahir, $ttl, $jk, $pekerjaan, $alamat, $provinsi, $kota, $kecamatan, $kelurahan];
   foreach ($required as $item) {
     if ($item === "") {
