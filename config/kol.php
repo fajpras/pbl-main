@@ -2,9 +2,9 @@
 
 //koneksi bahaya
 $db = 'pbl'
-;$user = 'faleft'
+;$user = 'root'
 ;$host = 'localhost'
-;$pass = 'Bangpras.07'
+;$pass = ''
 ;
 
 $conn = mysqli_connect($host, $user, $pass, $db);
