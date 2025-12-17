@@ -13,8 +13,8 @@ session_start();
 //ambil form login
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //ambil
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
 
   //admin
   $Q_admin = "SELECT * from admin where email = '$email'";

@@ -21,6 +21,8 @@ body {
   /* height: 400vh; */
 }
 
+/*======= akhir ========*/
+
 /* ===== SIDEBAR ===== */
 .sidebar {
   background-color: rgba(30, 25, 60, 0.9);
@@ -198,11 +200,7 @@ footer p {
 
 .card{
   height: 250px;
-  background-color: ;
 }
-
-
-
 
 
 @media screen and (max-width: 980px) {

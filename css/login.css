@@ -14,19 +14,21 @@
     cursor: pointer !important; 
 }
 body {
-    background: url('../assets/ikn2.jpeg') top/cover no-repeat;
-    height: 130vh;
-    width: 100%;
-    /* background-size: 110%; */
+    background: url('../assets/ikn2.jpeg') center/cover no-repeat;
+    min-height: 130vh; 
+    color: #fff;
+    scroll-behavior: smooth;
 }
 
-.daftar , main {
+.daftar  {
     width: 100%;
     background-color: #3529477c;
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
 }
-
+main{
+    height:130vh;
+}
 form {
     padding: 20px;
     color: white;
@@ -40,10 +42,12 @@ form {
 }
 /* ========CARD======== */
 .card {
-    background-color: rgba(172, 183, 209, 0.319);
+    background-color: rgba(138, 146, 164, 0.525);
     border-radius: 20px;
     border: 1px solid white;
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    scale: 0.9;
 }
 
 .card-body h3 {
@@ -66,13 +70,13 @@ a {
 
 /* logo */
 img {
-    height: 150px;
+    height: 100px;
 }
 
 /* footer */
 
 footer {
-    background-color: #3529477c;
+    background-color: #1c1c1c;
     height: 50px;
     display: flex;
     align-items: center;
@@ -81,7 +85,7 @@ footer {
 }
 
 footer p {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 14px;
     margin: 0;
 }
@@ -112,6 +116,111 @@ footer p {
 }
 .bi-x{
     cursor:pointer;
+}
+
+/*
+============================================
+update from liar
+============================================
+*/
+
+.alert-custom {
+    background-color: #fff2f2;
+    border: 1px solid #fcc2c3;
+    border-left: 5px solid #dc3545;
+    color: #a71d2a;
+    padding: 9px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    animation: slideDown 0.4s ease-out;
+}
+.alert-custom i { font-size: 1.5rem; }
+.alert-custom p { margin: 0; font-weight: 500; font-size: 14px; }
+.error-message {
+    color: #ff0000; font-size: 0.85rem; margin-top: 5px;
+    display: flex; align-items: center; gap: 5px; font-weight: 500;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5zM6 8.2af.43.43 0 010 .86.43.43 0 010-.86z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.form-control:focus { box-shadow: none; border-color: #000; }
+.form-control.is-invalid:focus { box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25); border-color: #dc3545; }
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lupa-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 1050; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px); 
+    transition: opacity 0.3s ease;
+}
+
+.lupa-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Jarak dari atas */
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    animation: modalSlide 0.4s ease-out;
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.lupa-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lupa-header h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+}
+
+.btn-close-custom {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: 0.2s;
+}
+
+.btn-close-custom:hover { color: #000; }
+
+.lupa-body { padding: 20px; }
+
+.lupa-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 /* ===============RESPONSIVE================= */
 @media screen and (max-width: 980px) {

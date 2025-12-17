@@ -102,6 +102,7 @@ $id = $_SESSION['id_warga'];
       border-left: 4px solid #9e8025ff;
       border-radius: 4px;
     }
+ 
     </style>
   </head>
 
@@ -195,14 +196,14 @@ $id = $_SESSION['id_warga'];
 
             //PENDING
             if ($get_status == 'PENDING' ){
-            $status_label = "Menunggu Verifikasi";
+            $status_label = "Diperiksa";
             $warna = "bg-warning text-black";
             $tombol_aksi = '<button class="btn btn-secondary btn-sm" disabled>Diproses</button>';
 
 
             //DISETUJUI
             }elseif ($get_status == 'DISETUJUI' ){
-            $status_label = "Menunggu Verifikasi";
+            $status_label = "Diperiksa";
             $warna = "bg-warning text-black";
             $tombol_aksi = '<button class="btn btn-secondary btn-sm" disabled>Diproses</button>';
 
@@ -210,7 +211,7 @@ $id = $_SESSION['id_warga'];
             } elseif ($get_status == "SELESAI") {
             $status_label = "Disetujui";
             $warna = "bg-success";
-            $link = "../kol.php?id=$id_surat&dok=$nama_dokumen&idw=$id";
+            $link = "../surat.php?id=$id_surat&dok=$nama_dokumen&idw=$id";
             $tombol_aksi = '<a href="'.$link.'" class="btn btn-outline-light btn-sm"> 
             <i class="bi bi-download"></i> Download 
             </a>';

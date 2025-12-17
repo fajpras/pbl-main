@@ -9,21 +9,25 @@
 }
 
 body {
-    background: url(../assets/ikn2.jpeg) top/cover no-repeat;
-    height: 130vh;
-    width: 100%;
+    background: url('../assets/ikn2.jpeg') center/cover no-repeat;
+    min-height: 100%;
+    color: #fff;
+    min-height: 130vh; 
+    scroll-behavior: smooth;
 }
 /* =========main content======== */
 .daftar {
 
   
     background-color: #3529477c;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     margin: 0;
 }
 
-
+main{
+    height:130vh;
+}
 
 /* logo back */
 .back{
@@ -34,10 +38,11 @@ body {
 }
 /* card-form */
 .card {
-    background-color: rgba(172, 183, 209, 0.319);
+    background-color: rgba(138, 146, 164, 0.525);
     border-radius: 20px;
     border: 1px solid white;
     backdrop-filter: blur(10px);
+    scale: 0.9;
 }
 
 .card-body h3 {
@@ -62,14 +67,14 @@ a {
 }
 
 img {
-    height: 150px;
+    height: 100px;
 }
 
 /* =============footer========= */
 
 
 footer {
-    background-color: #3529477c;
+    background-color: #1c1c1c;
     height: 50px;
     display: flex;
     align-items: center;

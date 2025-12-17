@@ -107,30 +107,56 @@ $src = "data:$mimeType;base64,$base64";
 
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lihat Dokumen</title>
-    <style>
-    body, html { margin: 0; padding: 0; height: 100%; background-color: #525659; }
-    .container { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; }
-    img { max-width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.5); border-radius: 4px; }
-    .pdf-container { width: 100%; height: 100vh; }
-    </style>
-  </head>
-  <body>
 
-    <?php if ($mimeType === 'application/pdf') : ?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lihat Dokumen</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #525659;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+    }
+
+    .pdf-container {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <?php if ($mimeType === 'application/pdf') : ?>
     <div class="pdf-container">
       <embed src="<?= $src ?>" type="application/pdf" width="100%" height="100%">
     </div>
 
-    <?php else : ?>
+  <?php else : ?>
     <div class="container">
       <img src="<?= $src ?>" alt="Dokumen Warga">
     </div>
 
-    <?php endif; ?>
+  <?php endif; ?>
 
-  </body>
+</body>
+
 </html>

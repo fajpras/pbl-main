@@ -27,7 +27,7 @@ include "../config/auth.php";
     <nav class="navbar navbar-dark bg-dark fixed-top" id="navigasi">
       <div class="container-fluid justify-content-between">
         <div class="logo d-flex align-items-center ">
-          <a href="../warga/riwayat.php" class=" text-black"><i
+          <a  onclick="history.back()" class=" text-black"><i
             class="fs-2 px-3 fw-bold text-light bi bi-arrow-left-circle"></i>
           </a>
           <img src="../assets/logo.svg" alt="logo">

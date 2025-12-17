@@ -15,7 +15,7 @@ if (isset($_GET['note'])) {
 //ambil POST tambah modal
 $nama = $_POST['nama'];
 $email = $_POST['email'];
-$password= $_POST['password'];
+$password = $_POST['password'];
 $Password = password_hash($password, PASSWORD_DEFAULT);
 
 //query insert petugas
@@ -24,7 +24,4 @@ $validasi = mysqli_query($conn, $QQ);
 
 if ($validasi) {
   header("Refresh:0; url=../admin/tambah-petugas.php");
-
 }
-
-?>

@@ -27,8 +27,5 @@ $Q_petugas = "INSERT INTO data_diri_petugas (id_petugas, nama_lengkap, nomor, em
 $F_petugas = mysqli_query($conn, $Q_petugas);
 
 if ($F_petugas) {
-header("Refresh:2; url:=../admin/tambah-petugas.php");
-
+  header("Refresh:2; url:=../admin/tambah-petugas.php");
 }
-
-?>

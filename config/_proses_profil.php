@@ -10,8 +10,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 //link
-include ("kol.php");
-include ("../config/auth.php");
+include("kol.php");
+include("../config/auth.php");
 
 // pastikan login
 if (!isset($_SESSION['id_warga'])) {
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $file_name = $oldData['foto_profil'] ?? null;
   if (!empty($_FILES['profil']['name'])) {
     $ext = pathinfo($_FILES['profil']['name'], PATHINFO_EXTENSION);
-    $allowed = ['jpg','jpeg','png','webp'];
+    $allowed = ['jpg', 'jpeg', 'png', 'webp'];
 
     if (!in_array(strtolower($ext), $allowed)) {
       die("<script>alert('Format foto tidak valid!');history.back();</script>");
@@ -76,7 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // ESCAPE
-  function esc($conn, $v) { return mysqli_real_escape_string($conn, $v); }
+  function esc($conn, $v)
+  {
+    return mysqli_real_escape_string($conn, $v);
+  }
 
   $nama      = esc($conn, $nama);
   $email     = esc($conn, $email);
@@ -101,17 +104,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         alert('Data berhasil ditambahkan!');
       window.location = '../dashboard.php';
                   </script>";
-        } else {
-            die("Insert Error: " . mysqli_error($conn));
-        }
+    } else {
+      die("Insert Error: " . mysqli_error($conn));
+    }
+  }
 
-    } 
 
+  //update data
+  else {
 
-    //update data
-    else {
-
-        $sql = "UPDATE data_diri SET
+    $sql = "UPDATE data_diri SET
             nama_lengkap   = '$nama',
             foto_profil    = '$file_name',
             nik            = '$nik',
@@ -128,16 +130,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             kelurahan      = '$kelurahan'
             WHERE id_warga = '$id_warga'";
 
-        $update = mysqli_query($conn, $sql);
+    $update = mysqli_query($conn, $sql);
 
-        if ($update) {
-            echo "<script>
+    if ($update) {
+      echo "<script>
               alert('Data berhasil diperbarui!');
-            window.location = '../dashboard.php';
+            window.location.href = '../dashboard.php';
             </script>";
-        } else {
-            die("Update Error: " . mysqli_error($conn));
-        }
+    } else {
+      die("Update Error: " . mysqli_error($conn));
     }
+  }
 }
-?>

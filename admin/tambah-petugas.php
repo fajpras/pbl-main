@@ -22,9 +22,8 @@ $id = $_SESSION['id_admin'];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Tambah Petugas | AJUK</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -33,10 +32,10 @@ $id = $_SESSION['id_admin'];
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f6f9; /* Background konten lebih bersih */
+            background-color: #f4f6f9;
+            /* Background konten lebih bersih */
         }
 
-        /* --- STYLE BARU UNTUK TABEL (CARD STYLE) --- */
         .card-table-container {
             background: #ffffff;
             border-radius: 12px;
@@ -87,6 +86,7 @@ $id = $_SESSION['id_admin'];
             box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
             transition: all 0.3s ease;
         }
+
         .btn-add-custom:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
@@ -94,13 +94,13 @@ $id = $_SESSION['id_admin'];
         }
 
         .swal-dark-container {
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            margin-top: 15px; 
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
             text-align: left;
         }
-        
+
         .swal-label {
             color: #adb5bd;
             font-size: 0.85rem;
@@ -133,7 +133,7 @@ $id = $_SESSION['id_admin'];
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            
+
             <div class="col-auto px-0 sidebar">
                 <div id="sidebar" class="collapse collapse-horizontal show">
                     <div class="d-flex container-fluid">
@@ -178,7 +178,7 @@ $id = $_SESSION['id_admin'];
 
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h2 class="fw-bold m-0" style="color: #fff;">Manajemen Petugas</h2>
-                        
+
                         <button class="btn-add-custom" type="button" onclick="openPetugasModal()">
                             <i class="fas fa-plus-circle me-2"></i>Tambah Petugas
                         </button>
@@ -249,7 +249,7 @@ $id = $_SESSION['id_admin'];
                     </div>
 
                 </section>
-                
+
                 <footer class="container-fluid mt-3 mb-3 text-center text-muted small">
                     <p class="m-0">AJUK - Copyright © 2025. All rights reserved.</p>
                 </footer>
@@ -271,7 +271,7 @@ $id = $_SESSION['id_admin'];
             padding: '2rem',
             background: '#37383b', // Tema Gelap sesuai kode asli
             color: '#f0f0f0',
-            
+
             // HTML Custom yang lebih rapi
             html: `
             <div class="swal-dark-container">
@@ -304,7 +304,9 @@ $id = $_SESSION['id_admin'];
 
                 return fetch("../admin-config/_tambah-petugas.php", {
                     method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
                     body: `nama=${encodeURIComponent(nama)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
                 })
             }
@@ -332,7 +334,7 @@ $id = $_SESSION['id_admin'];
             width: "650px",
             background: "#2f3033",
             color: "#efefef",
-            
+
             html: `
             <div class="swal-dark-container">
                 
@@ -393,15 +395,22 @@ $id = $_SESSION['id_admin'];
                     return false;
                 }
 
-                return { nama, hp, email, tl, tgl, jk };
+                return {
+                    nama,
+                    hp,
+                    email,
+                    tl,
+                    tgl,
+                    jk
+                };
             }
         }).then((result) => {
             if (result.isConfirmed) {
                 const data = result.value;
-                
+
                 // MENGGUNAKAN ID UNIK (Penting agar tidak tertukar datanya)
                 const f = document.getElementById("formAlasan_" + id);
-                
+
                 document.getElementById("hidden_nama_" + id).value = data.nama;
                 document.getElementById("hidden_hp_" + id).value = data.hp;
                 document.getElementById("hidden_email_" + id).value = data.email;
@@ -424,4 +433,5 @@ $id = $_SESSION['id_admin'];
         });
     }
 </script>
+
 </html>
