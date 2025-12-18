@@ -155,7 +155,7 @@ $id = $_SESSION['id_admin'];
                                 </a>
                             </li>
                             <li class="">
-                                <a href="tambah-pgs.php" class="nav-link align-middle ">
+                                <a href="#" class="nav-link align-middle ">
                                     <i class="bi  bi-person"></i>Tambah Petugas
                                 </a>
                             </li>
